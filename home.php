@@ -17,6 +17,7 @@ $_SESSION['id_role'] = $user['id_role'];
 
 
   };
+
   ?>
 
 <!DOCTYPE html>
@@ -31,7 +32,7 @@ $_SESSION['id_role'] = $user['id_role'];
     <header>
 
       <nav class="nav">
-        <h1 class="Montitre">The Good Deal<h1/>
+        <h1 class="Montitre">The Good Deal <h1/>
         <form class="formSearch" action="/searchAnnonce.php" method="post">
           <input type="text" name="type" placeholder="Rechercher des Annonces">
           <button class="buttonSearch" type="submit" name="button">
@@ -42,11 +43,14 @@ $_SESSION['id_role'] = $user['id_role'];
       <div class="sara">
         <ul class="ul1">
           <li>
-            <p class="pseudo_user">Bienvenue <?php echo $_SESSION['pseudo']?></p>
+            <p class="pseudo_user"> <?php echo $_SESSION['pseudo']?></p>
           </li>
 
           <li>
             <a href="./home.php">Accueil</a>
+          </li>
+          <li>
+            <a href="./createUser.php">gérer les utilisateurs</a>
           </li>
           <li>
             <a href="./insertAnnonce.php">Déposer une annonce</a>
@@ -54,7 +58,7 @@ $_SESSION['id_role'] = $user['id_role'];
         </ul>
       </div>
       <div class="leila">
-          <li>
+
 
             <div class="dropdown">
               <button class="dropbtn"><img class="imgDropDown" src="./img/img.png"></button>
@@ -115,31 +119,7 @@ $_SESSION['id_role'] = $user['id_role'];
 
     <?php endforeach
 
-        // foreach($annonces as $key => $annonce){
-        //
-        //  echo "<div class='post'>
-        //         <div class='actions'>" . $annonce['pseudo'] . " " . $annonce['date_poste'] .  "
-        //
-        //         </div>
-        //
-        //         <div class='user-post'>" . $annonce['titre'] .
-        //         "</div>
-        //         <div class='comment-post'>" . $annonce['type'] .
-        //         "</div>
-        //         <div class='comment-post'>" . $annonce['contenu'] .
-        //         "</div>";
-        //
-        //
-        //         "<div class='actions'>  <form action='./controllers/deleteAnnonceController.php' method='POST'>
-        //             <input type='hidden' name='id' value=". $annonce['annonce_id'].">
-        //             <input class='delete' type='submit' value='Supprimer cette annonce'>
-        //           </form>
-        //
-        //       </div>
-        //
-        //
-        //       </div>";
-        //   }
+
         ?>
       </div>
 

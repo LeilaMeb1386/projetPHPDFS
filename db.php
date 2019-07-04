@@ -7,8 +7,27 @@ function getOneUser($email, $mp) {
     ":email" => $email,
     ":mp" => $mp,
   ]);
+
   return $request->fetch(PDO::FETCH_ASSOC);
 }
+
+
+// function getOneUser($email, $mp) {
+//   $connec = new PDO('mysql:dbname=LeBonCoin', 'root', '0000');
+//   $connec->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//   $request = $connec->prepare("SELECT id,pseudo,email, mp, id_role  FROM users WHERE email = :email AND mp = :mp;");
+//   $request->bindParam(":email", $email);
+//   $request->bindParam(":mp", $mp);
+//   $request->execute();
+//   $user = $request->fetch(PDO::FETCH_ASSOC);
+//   if($user) {
+//     session_start();
+//     $_SESSION['user'] = $user;
+//     return $user;
+//   } else {
+//     header('Location: /404.php');die;
+//   }
+// }
 
 function insertUser($pseudo, $email, $mp, $id_role){
   $connec = new PDO("mysql:dbname=LeBonCoin", 'root', '0000');
@@ -64,7 +83,7 @@ function findOneAnnonce($type) {
 
 function deleteUser($id){
   $connec = new PDO("mysql:dbname=LeBonCoin", 'root', '0000');
-  $connec->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);// cette ligne de code permet d'fficher les erreurs PDO
+  $connec->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $request = $connec->prepare("DELETE FROM users WHERE id = :id ;");
   $request->execute([
     ":id" => $id,

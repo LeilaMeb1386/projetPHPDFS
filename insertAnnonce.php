@@ -49,7 +49,7 @@ $_SESSION['pseudo'] = $user['pseudo'];
         </ul>
       </div>
       <div class="leila">
-          <li>
+        
             <div class="dropdown">
               <button class="dropbtn"><img class="imgDropDown" src="./img/img.png"></button>
                 <div class="dropdown-content">
