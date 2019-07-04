@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+height: 10vh;
+width: 100vw;
+background-color:#82798C;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.Montitre{
+  color:#F2785C;
+}
+.container{
+height: 100%;
+width: 70%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+}
+
+
+main{
+height: 70vh;
+width: 100vw;
+background-color: #E9EAED;
+display: flex;
+flex-direction: row;
+}
+.main-container{
+height: 100%;
+width: 60%;
+display: flex;
+justify-content: flex-end;
+}
+.entourage{
+    height: 400px;
+    width: 700px;
+    padding-top: 20px;
+}
+.second-container{
+    width: 20vw;
+    height: 100%;
+    padding-left: 100px;
+
+}
+.inscription{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.submit{
+    background: #F2784B;
+    height: 30px;
+    width: 250px;
+    color: white;
+    border-radius: 10%;
+    font-size: 1.5em;
+}
+h1{
+    padding: 20px;
+    text-align: left;
+}
+h3{
+    padding: 10px;
+    text-align: left;
+}
+p{
+    font-size: 10px;
+    padding: 5px;
+}
+input{
+
+}
+.semi{
+    width: 39%;
+}
+.full{
+    width: 80%;
+}
+
+footer{
+height: 20vh;
+width: 100vw;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
