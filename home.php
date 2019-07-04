@@ -49,9 +49,7 @@ $_SESSION['id_role'] = $user['id_role'];
           <li>
             <a href="./home.php">Accueil</a>
           </li>
-          <li>
-            <a href="./createUser.php">gérer les utilisateurs</a>
-          </li>
+      
           <li>
             <a href="./insertAnnonce.php">Déposer une annonce</a>
           </li>
